@@ -1,0 +1,10 @@
+(define pi 3.14169265)
+(define (cube x) (* x x x ))
+(define (sin x)
+  (display "HOW HI HIGH ARE YOU?")
+  (if (< x 0.000000000001)
+      ((display x) x)
+      ((define val (sin (/ x 3)))
+       (- (* 3 val) (* 4 (cube val))))))
+
+(sin (* 45 (/ pi 180)))

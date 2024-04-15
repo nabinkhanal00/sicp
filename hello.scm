@@ -1,0 +1,7 @@
+(define (sqrt x)
+  (define a 10)
+  (define b 11)
+  (display a)
+  (+ a)
+)
+(sqrt 11)

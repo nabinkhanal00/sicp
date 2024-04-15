@@ -1,0 +1,10 @@
+; (define (<= a b) (or (< a b) (= a b)))
+; (define (factorial n) ( if (<= n 1) 1 (* n (factorial (- n 1)))))
+(define (factiter product counter n)
+   (if (> counter n)
+        product
+        (factiter (* product counter)
+                   (+ counter 1) 
+                   n)))
+(define (factorial n) (factiter 1 1 n))
+(factorial 5)

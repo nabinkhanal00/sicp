@@ -1,0 +1,15 @@
+(define (citer a b c count n)
+  (cond ((< n 3)  n)
+        ((= count n) a)
+        (else (citer b c (+ c (* 2 b) (* 3 a)) (+ count 1) n))))
+(define (crecur n)
+  (if (< n 3)
+       n 
+       (+ (* 3 (crecur (- n 3)))
+           (* 2 (crecur (- n 2)))
+           (crecur (- n 1)))))
+(define (challenge-iter n) (citer 0 1 2 0 n))
+(define (challenge-recur n) (crecur n))
+
+(challenge-iter 10)
+(challenge-recur 10)
